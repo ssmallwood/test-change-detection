@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test News Page - Radar Change Detection</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
+        .news-list { list-style: none; padding: 0; }
+        .news-list li { padding: 0.75rem 0; border-bottom: 1px solid #eee; }
+        .news-list a { color: #0066cc; text-decoration: none; font-size: 1.1rem; }
+        .news-list a:hover { text-decoration: underline; }
+        .date { color: #666; font-size: 0.875rem; margin-left: 0.5rem; }
+        .instructions { background: #f5f5f5; padding: 1rem; border-radius: 4px; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <h1>Test News Page</h1>
+
+    <div class="instructions">
+        <strong>Testing Instructions:</strong>
+        <ol>
+            <li>Host this page somewhere (e.g., on your VPS or GitHub Pages)</li>
+            <li>Add a watch in changedetection.io pointing to this URL</li>
+            <li>Edit this file to add/remove an article link</li>
+            <li>Wait for changedetection.io to detect the change</li>
+            <li>Check Radar's discovery_events for extracted URLs</li>
+        </ol>
+    </div>
+
+    <h2>Latest News</h2>
+    <ul class="news-list">
+        <li>
+            <a href="/news/2024/03/community-college-funding-boost">Community College Funding Gets Major Boost</a>
+            <span class="date">March 15, 2024</span>
+        </li>
+        <li>
+            <a href="/news/2024/03/new-workforce-partnership">New Workforce Partnership Announced</a>
+            <span class="date">March 12, 2024</span>
+        </li>
+        <li>
+            <a href="/news/2024/03/stem-initiative-launch">STEM Initiative Launches Across Five States</a>
+            <span class="date">March 10, 2024</span>
+        </li>
+        <!-- ADD NEW ARTICLES ABOVE THIS LINE TO TRIGGER CHANGE DETECTION -->
+    </ul>
+
+    <p><small>Last updated: <span id="timestamp"></span></small></p>
+    <script>document.getElementById('timestamp').textContent = new Date().toISOString();</script>
+</body>
+</html>
