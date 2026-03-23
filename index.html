@@ -14,7 +14,6 @@
 </head>
 <body>
     <h1>Test News Page</h1>
-
     <div class="instructions">
         <strong>Testing Instructions:</strong>
         <ol>
@@ -25,9 +24,13 @@
             <li>Check Radar's discovery_events for extracted URLs</li>
         </ol>
     </div>
-
     <h2>Latest News</h2>
     <ul class="news-list">
+        <li>
+            <a href="test-article.html">As Employers Up Demand for Experience, a Nonprofit Is Building It Into High School</a>
+            <span class="date">March 20, 2026</span>
+        </li>
+        <!-- ADD NEW ARTICLES ABOVE THIS LINE TO TRIGGER CHANGE DETECTION -->
         <li>
             <a href="/news/2024/03/community-college-funding-boost">Community College Funding Gets Major Boost</a>
             <span class="date">March 15, 2024</span>
@@ -40,9 +43,7 @@
             <a href="/news/2024/03/stem-initiative-launch">STEM Initiative Launches Across Five States</a>
             <span class="date">March 10, 2024</span>
         </li>
-        <!-- ADD NEW ARTICLES ABOVE THIS LINE TO TRIGGER CHANGE DETECTION -->
     </ul>
-
     <p><small>Last updated: <span id="timestamp"></span></small></p>
     <script>document.getElementById('timestamp').textContent = new Date().toISOString();</script>
 </body>
